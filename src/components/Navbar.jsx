@@ -61,9 +61,9 @@ export default function Navbar() {
             </li>
 
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <NavLink className="nav-link" to="/login">
                 <FaUser className="nav-icon" />
-              </a>
+              </NavLink>
             </li>
 
             <li className="nav-item position-relative">
