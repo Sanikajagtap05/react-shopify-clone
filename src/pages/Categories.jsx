@@ -1,78 +1,48 @@
-import React from "react";
-import CategoryCard from "./CategoryCard";
+import categories from "../data/categories";
+import CategoryCard from "../pages/CategoryCard";
 
-export default function Categories() {
+function Categories() {
   return (
-    <div>
-      <h2>Categories</h2>
-
-      <div
+    <div className="container mt-4">
+      <h2
         style={{
-          display: "flex",
-          flexWrap: "wrap",
+          marginBottom: "20px",
+          fontWeight: "500",
+          fontSize: "32px",
         }}
       >
-        <CategoryCard name="Beauty" />
+        Categories
+      </h2>
 
-        <CategoryCard name="Fragrances" />
-
-        <CategoryCard name="Furniture" />
-
-        <CategoryCard name="Groceries" />
-
-        <CategoryCard name="Home Decoration" />
-
-        <CategoryCard name="Kitchen Accessories" />
-
-        <CategoryCard name="Laptops" />
-
-        <CategoryCard name="Mens Shirts" />
-
-        <CategoryCard name="Mens Shoes" />
-
-        <CategoryCard name="Mens Watches" />
-
-        <CategoryCard name="Mobile Accessories" />
-
-        <CategoryCard name="Motorcycle" />
-
-        <CategoryCard name="Skin Care" />
-
-        <CategoryCard name="Smartphones" />
-
-        <CategoryCard name="Sports Accessories" />
-
-        <CategoryCard name="Sunglasses " />
-
-        <CategoryCard name="Tablets" />
-
-        <CategoryCard name="Tops" />
-
-        <CategoryCard name="Vehicles" />
-
-        <CategoryCard name="Women Bags" />
-
-        <CategoryCard name="Women Dresses" />
-
-        <CategoryCard name="Women Shoes" />
-
-        <CategoryCard name="Women Jewellery" />
-
-        <CategoryCard name="Women Watches" />
-
-        
-
-
-
-
-
-
-
-
-
-
-
+      <div className="row g-4">
+        {categories.map((category) => (
+          <div
+            key={category.slug}
+            className="col-xl-3 col-lg-4 col-md-6 col-sm-6"
+          >
+            <div
+              style={{
+                backgroundColor: "#f5f5f5",
+                padding: "22px",
+                height: "110px",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                borderRadius: "2px",
+                transition: "0.3s",
+                cursor: "pointer",
+              }}
+            >
+              <CategoryCard
+                name={category.name}
+                slug={category.slug}
+              />
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
 }
+
+export default Categories;
