@@ -13,28 +13,69 @@ function Login() {
   }
 
   return (
-    <div>
-      <h2>Login Page</h2>
+    <div
+      style={{
+        height: "100vh",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "#f2f2f2",
+      }}
+    >
+      <div
+        style={{
+          width: "300px",
+          padding: "30px",
+          backgroundColor: "white",
+          borderRadius: "10px",
+          textAlign: "center",
+          boxShadow: "0 0 10px gray",
+        }}
+      >
+        <h2 style={{ marginBottom: "20px" }}>Login Page</h2>
 
-      <input
-        type="text"
-        placeholder="Username"
-        onChange={(e) => setUsername(e.target.value)}
-      />
+        <input
+          type="text"
+          placeholder="Username"
+          onChange={(e) => setUsername(e.target.value)}
+          style={{
+            width: "100%",
+            padding: "10px",
+            marginBottom: "15px",
+            border: "1px solid gray",
+            borderRadius: "5px",
+          }}
+        />
 
-      <br />
-      <br />
+        <input
+          type="password"
+          placeholder="Password"
+          onChange={(e) => setPassword(e.target.value)}
+          style={{
+            width: "100%",
+            padding: "10px",
+            marginBottom: "20px",
+            border: "1px solid gray",
+            borderRadius: "5px",
+          }}
+        />
 
-      <input
-        type="password"
-        placeholder="Password"
-        onChange={(e) => setPassword(e.target.value)}
-      />
-
-      <br />
-      <br />
-
-      <button onClick={login}>Login</button>
+        <button
+          onClick={login}
+          style={{
+            width: "100%",
+            padding: "10px",
+            backgroundColor: "blue",
+            color: "white",
+            border: "none",
+            borderRadius: "5px",
+            cursor: "pointer",
+            fontSize: "16px",
+          }}
+        >
+          Login
+        </button>
+      </div>
     </div>
   );
 }
