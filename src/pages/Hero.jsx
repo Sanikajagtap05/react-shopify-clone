@@ -1,7 +1,10 @@
 import React from "react";
 import img from "../assets/do.webp"; // Your laptop image
+import { useNavigate } from "react-router-dom";
 
 export default function Hero() {
+  const navigate = useNavigate();
+
   return (
     <section className="hero">
       {/* Left Content */}
@@ -17,7 +20,7 @@ export default function Hero() {
           Exclusive offer <span>-50%</span> off this week
         </h3>
 
-        <button className="hero-btn">
+        <button className="hero-btn" onClick={() => navigate("/category/laptops")}>
           Grab the opportunity Now
         </button>
       </div>
