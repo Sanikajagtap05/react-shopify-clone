@@ -11,6 +11,7 @@ import Products1 from "./pages/Products1";
 import Login from "./pages/login";
 import CategoryProducts from "./pages/CategoryProducts";
 import FetchProducts from "./pages/FetchProducts";
+import ProductDetailpage from "./pages/ProductDetailpage";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
     < Route  path="/" element={<Home/>} />
     <Route path="/category/:slug" element={<CategoryProducts />} />
     <Route path="/fetch-products" element={<FetchProducts />} />
+    <Route path="/detail/:id" element={<ProductDetailpage />} />
     </Routes>
 
   
