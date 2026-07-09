@@ -354,6 +354,9 @@
 //   );
 // }
 
+
+// this page is used to fetch the data from the api and display it in the card format using data directly in json from.
+
 import React from 'react'
 
 export default function Products1() {

@@ -10,6 +10,7 @@ import Home from "./pages/Home";
 import Products1 from "./pages/Products1";
 import Login from "./pages/login";
 import CategoryProducts from "./pages/CategoryProducts";
+import FetchProducts from "./pages/FetchProducts";
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
     < Route path="/login" element={<Login/>} />
     < Route  path="/" element={<Home/>} />
     <Route path="/category/:slug" element={<CategoryProducts />} />
+    <Route path="/fetch-products" element={<FetchProducts />} />
     </Routes>
 
   
