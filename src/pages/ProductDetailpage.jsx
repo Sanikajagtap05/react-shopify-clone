@@ -26,6 +26,7 @@ export default function ProductDetailpage() {
             <div className="col-lg-6 d-flex flex-column justify-content-center text-center">
                 <h4>{data.title}</h4>
                 <p>{data.description}</p>
+                <a href="#" className="btn btn-primary">{data.price}</a>
             </div>
         </div>
       </div>
