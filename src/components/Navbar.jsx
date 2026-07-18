@@ -67,13 +67,13 @@ export default function Navbar() {
             </li>
 
             <li className="nav-item position-relative">
-              <a className="nav-link" href="/">
+              <NavLink className="nav-link" to="/cart">
                 <FaShoppingCart className="nav-icon" />
 
                 <span className="cart-badge">
                   0
                 </span>
-              </a>
+              </NavLink>
             </li>
 
             <li className="nav-item">
